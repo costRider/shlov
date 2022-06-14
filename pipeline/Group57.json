@@ -1,0 +1,1349 @@
+{
+	"name": "Group57",
+	"properties": {
+		"activities": [
+			{
+				"name": "TDW_TD_ZNGM_ORG_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZNGM_ORG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2280
+				}
+			},
+			{
+				"name": "TDW_TD_ZNGM_ORG_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZNGM_ORG_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZNGM_ORG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2281
+				}
+			},
+			{
+				"name": "TD_ZNGM_USER_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZNGM_USER"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2282
+				}
+			},
+			{
+				"name": "TDW_TD_ZNGM_USER_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZNGM_USER_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZNGM_USER"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2283
+				}
+			},
+			{
+				"name": "TDW_TD_ZNGM_USER_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZNGM_USER_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZNGM_USER"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2284
+				}
+			},
+			{
+				"name": "TD_ZORD_CO_CUST_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZORD_CO_CUST"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2285
+				}
+			},
+			{
+				"name": "TDW_TD_ZORD_CO_CUST_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZORD_CO_CUST_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZORD_CO_CUST"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2286
+				}
+			},
+			{
+				"name": "TDW_TD_ZORD_CO_CUST_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZORD_CO_CUST_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZORD_CO_CUST"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2287
+				}
+			},
+			{
+				"name": "TD_ZORD_CUST_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZORD_CUST"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2288
+				}
+			},
+			{
+				"name": "TDW_TD_ZORD_CUST_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZORD_CUST_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZORD_CUST"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2289
+				}
+			},
+			{
+				"name": "TDW_TD_ZORD_CUST_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZORD_CUST_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZORD_CUST"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2290
+				}
+			},
+			{
+				"name": "TD_ZORD_M2M_BA_STRD_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZORD_M2M_BA_STRD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2291
+				}
+			},
+			{
+				"name": "TDW_TD_ZORD_M2M_BA_STRD_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZORD_M2M_BA_STRD_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZORD_M2M_BA_STRD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2292
+				}
+			},
+			{
+				"name": "TDW_TD_ZORD_M2M_BA_STRD_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZORD_M2M_BA_STRD_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZORD_M2M_BA_STRD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2293
+				}
+			},
+			{
+				"name": "TD_ZPRD_PROD_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZPRD_PROD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2294
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRD_PROD_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZPRD_PROD_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRD_PROD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2295
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRD_PROD_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZPRD_PROD_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRD_PROD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2296
+				}
+			},
+			{
+				"name": "TD_ZPRM_PTN_ORG_DTL_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZPRM_PTN_ORG_DTL"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2297
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_PTN_ORG_DTL_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZPRM_PTN_ORG_DTL_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_PTN_ORG_DTL"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2298
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_PTN_ORG_DTL_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZPRM_PTN_ORG_DTL_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_PTN_ORG_DTL"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2299
+				}
+			},
+			{
+				"name": "TD_ZPRM_RGN_CMRNG_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZPRM_RGN_CMRNG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2300
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_RGN_CMRNG_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZPRM_RGN_CMRNG_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_RGN_CMRNG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2301
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_RGN_CMRNG_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZPRM_RGN_CMRNG_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_RGN_CMRNG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2302
+				}
+			},
+			{
+				"name": "TD_ZPRM_RGN_CMRNG_LDONG_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZPRM_RGN_CMRNG_LDONG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2303
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_RGN_CMRNG_LDONG_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZPRM_RGN_CMRNG_LDONG_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_RGN_CMRNG_LDONG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2304
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_RGN_CMRNG_LDONG_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZPRM_RGN_CMRNG_LDONG_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_RGN_CMRNG_LDONG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2305
+				}
+			},
+			{
+				"name": "BD_ZNGM_LDONG_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BD_ZNGM_LDONG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2306
+				}
+			},
+			{
+				"name": "BDW_BD_ZNGM_LDONG_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "BD_ZNGM_LDONG_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "BD_ZNGM_LDONG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2307
+				}
+			},
+			{
+				"name": "BDW_BD_ZNGM_LDONG_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "BDW_BD_ZNGM_LDONG_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "BD_ZNGM_LDONG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2308
+				}
+			},
+			{
+				"name": "BD_ZOSS_BLD_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BD_ZOSS_BLD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2309
+				}
+			},
+			{
+				"name": "BDW_BD_ZOSS_BLD_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "BD_ZOSS_BLD_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "BD_ZOSS_BLD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2310
+				}
+			},
+			{
+				"name": "BDW_BD_ZOSS_BLD_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "BDW_BD_ZOSS_BLD_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "BD_ZOSS_BLD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2311
+				}
+			},
+			{
+				"name": "TD_ZPRM_AGN_CHNL_CL_STRD_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZPRM_AGN_CHNL_CL_STRD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2312
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_AGN_CHNL_CL_STRD_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZPRM_AGN_CHNL_CL_STRD_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_AGN_CHNL_CL_STRD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2313
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_AGN_CHNL_CL_STRD_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZPRM_AGN_CHNL_CL_STRD_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_AGN_CHNL_CL_STRD"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2314
+				}
+			},
+			{
+				"name": "BD_ZNGM_ADDR_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BD_ZNGM_ADDR"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2315
+				}
+			},
+			{
+				"name": "BDW_BD_ZNGM_ADDR_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "BD_ZNGM_ADDR_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "BD_ZNGM_ADDR"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2316
+				}
+			},
+			{
+				"name": "BDW_BD_ZNGM_ADDR_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "BDW_BD_ZNGM_ADDR_01_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "BDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "BD_ZNGM_ADDR"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2317
+				}
+			},
+			{
+				"name": "TD_ZPRM_PTN_ORG_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TD_ZPRM_PTN_ORG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2318
+				}
+			},
+			{
+				"name": "TDW_TD_ZPRM_PTN_ORG_01_sh",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TD_ZPRM_PTN_ORG_to_vlake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_PTN_ORG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2319
+				}
+			}
+		],
+		"variables": {
+			"pipelineVal": {
+				"type": "String",
+				"defaultValue": "Default"
+			}
+		},
+		"folder": {
+			"name": "Test1"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-06-05T08:31:04Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

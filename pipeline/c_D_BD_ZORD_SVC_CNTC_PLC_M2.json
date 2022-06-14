@@ -1,0 +1,27 @@
+{
+	"name": "c_D_BD_ZORD_SVC_CNTC_PLC_M2",
+	"properties": {
+		"description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
+		"activities": [
+			{
+				"name": "c_D_BD_ZORD_SVC_CNTC_PLC_M2",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
+		"folder": {
+			"name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_MAIN_CL/0020"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-06-14T14:43:07Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

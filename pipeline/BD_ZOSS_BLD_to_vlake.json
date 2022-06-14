@@ -1,0 +1,27 @@
+{
+	"name": "BD_ZOSS_BLD_to_vlake",
+	"properties": {
+		"description": "/DBMSVC/EMR/TDW/bin/SDD/controlm/copy_to_vlake.sh %%PARM1 %%PARM2",
+		"activities": [
+			{
+				"name": "BD_ZOSS_BLD_to_vlake",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
+		"folder": {
+			"name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING_SDD/DATALAKE_DW_PROCESSING_SDD_CL/DW_COPY_TO_CDMP_SDD_CL"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-06-14T14:41:05Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

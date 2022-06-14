@@ -1,0 +1,108 @@
+{
+	"name": "Group58",
+	"properties": {
+		"activities": [
+			{
+				"name": "TDW_TD_ZPRM_PTN_ORG_02_sh",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "TDW"
+					},
+					{
+						"name": "%%PARM3",
+						"value": "TD_ZPRM_PTN_ORG"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2320
+				}
+			},
+			{
+				"name": "MV_REFRESH_DATALAKE_DW_PROCESSING_SDD_BDW_DAILY",
+				"type": "SetVatiable",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "DATALAKE_DW_PROCESSING_SDD_BDW_DAILY"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2321
+				}
+			},
+			{
+				"name": "MV_REFRESH_DATALAKE_DW_PROCESSING_SDD_TDW_DAILY",
+				"type": "SetVatiable",
+				"dependsOn": [
+					{
+						"activity": "TDW_TD_ZPRM_PTN_ORG_02_sh",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "%%PARM1",
+						"value": "%%$ODATE"
+					},
+					{
+						"name": "%%PARM2",
+						"value": "DATALAKE_DW_PROCESSING_SDD_TDW_DAILY"
+					}
+				],
+				"typeProperties": {
+					"variableName": "pipelineVal",
+					"value": 2322
+				}
+			}
+		],
+		"variables": {
+			"pipelineVal": {
+				"type": "String",
+				"defaultValue": "Default"
+			}
+		},
+		"folder": {
+			"name": "Test1"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-06-05T08:31:09Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}
