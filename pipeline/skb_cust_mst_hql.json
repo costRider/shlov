@@ -1,0 +1,36 @@
+{
+  "name": "skb_cust_mst_hql",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/check/skb_cust_mst.hql %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_SKB_MST_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZORD_CO_CUST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_CO_CUST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "skb_cust_mst_hql",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZORD_CO_CUST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "name": "T_OSS_01_END_M2",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "c_D_BD_ZOSS_AVAIL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_AVAIL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_BLDBLK_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_BLDBLK_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_BLDUNT_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_BLDUNT_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_BLDUNT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_BLDUNT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_BLD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_BLD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_COMM_CD_ADD_ATTR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_COMM_CD_ADD_ATTR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_DABL_OPER_DRCTN_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_DABL_OPER_DRCTN_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_DABL_RCV_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_DABL_RCV_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_EQUIP_ADD_ATTR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_EQUIP_ADD_ATTR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_EQUIP_SYS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_EQUIP_SYS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_FTTX_DATA_CONS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_FTTX_DATA_CONS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_FTTX_HLAN_CONS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_FTTX_HLAN_CONS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_HFC_DATA_CONS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_HFC_DATA_CONS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_HFC_HLAN_CONS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_HFC_HLAN_CONS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_LAN_DATA_CONS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_LAN_DATA_CONS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_MSC_FCLT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_MSC_FCLT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_OPERTR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_OPERTR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_OPER_CO_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_OPER_CO_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_OPER_CO_ORG_REL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_OPER_CO_ORG_REL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SCRBR_MSVCORG_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SCRBR_MSVCORG_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SVC_DABL_RCV_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SVC_DABL_RCV_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SVC_PORT_REL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SVC_PORT_REL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SVC_TECH_MTHD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_BD_ZOSS_SVC_TECH_MTHD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SVC_WEQP_REL_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SVC_WEQP_REL_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SVSET_OPER_ORD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SVSET_OPER_ORD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_SVSET_REQ_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SVSET_REQ_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_VOIP_CONS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_VOIP_CONS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_WEQP_GRP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_WEQP_GRP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_WEQP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_WEQP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZOSS_WEQP_MDL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_WEQP_MDL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZOSS_NIS_SATF_INVST_RSLT_LD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_NIS_SATF_INVST_RSLT_LD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZOSS_FCLT_AINSPT_REQ_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_FCLT_AINSPT_REQ_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZOSS_SVC_TECH_MTHD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZOSS_SVC_TECH_MTHD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_OSS_01_END_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "c_D_BD_ZOSS_AVAIL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_BLDBLK_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_BLDUNT_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_BLDUNT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_BLD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_COMM_CD_ADD_ATTR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_DABL_OPER_DRCTN_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_DABL_RCV_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_EQUIP_ADD_ATTR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_EQUIP_SYS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_FTTX_DATA_CONS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_FTTX_HLAN_CONS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_HFC_DATA_CONS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_HFC_HLAN_CONS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_LAN_DATA_CONS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_MSC_FCLT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_OPERTR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_OPER_CO_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_OPER_CO_ORG_REL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SCRBR_MSVCORG_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SVC_DABL_RCV_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SVC_PORT_REL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SVC_TECH_MTHD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SVC_WEQP_REL_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SVSET_OPER_ORD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_SVSET_REQ_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_VOIP_CONS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_WEQP_GRP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_WEQP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZOSS_WEQP_MDL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZOSS_NIS_SATF_INVST_RSLT_LD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZOSS_FCLT_AINSPT_REQ_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZOSS_SVC_TECH_MTHD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

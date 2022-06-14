@@ -1,0 +1,1243 @@
+{
+  "name": "T_BIL_01_END_M2",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "c_D_BD_ZINV_SVC_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_INV_SPC_BLUE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZINV_WIRE_EXPT_PEN_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_WIRE_EXPT_PEN_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZINV_WIRE_OTM_FEE_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_WIRE_OTM_FEE_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZINV_WIRE_SVC_DC_OBJ_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_WIRE_SVC_DC_OBJ_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZINV_WIRE_SVC_INV_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_WIRE_SVC_INV_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZPAY_CARD_PAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_BD_ZPAY_CARD_PAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZPAY_PAY_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PAY_SPC_BLUE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BILL_ISUE_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BILL_ISUE_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BILL_ITM_LST_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BILL_ITM_LST_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BILL_ITM_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BILL_ITM_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_DCPLN_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_DCPLN_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_DC_PLAN_REL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_DC_PLAN_REL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_INV_CL_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_INV_CL_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_INV_ITM_LST_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_INV_ITM_LST_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_INV_ITM_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_INV_ITM_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_IRM_REV_ITM_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_IRM_REV_ITM_INV_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_IRM_SVC_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_IRM_SVC_INV_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_NATE_CP_REV_ITM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_NATE_CP_REV_ITM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_NBILL_OBJ_REQ_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_NBILL_OBJ_REQ_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_NP_AF_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_NP_AF_INV_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_OK_CMP_PAY_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_OK_CMP_PAY_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_OPER_CTRL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_OPER_CTRL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_OP_ALT_RVITM_INV_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_OP_ALT_RVITM_INV_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_PRCPLN_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_PRCPLN_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_PRCPLN_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_PRCPLN_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_REV_ITM_LST_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_REV_ITM_LST_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_REV_ITM_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_REV_ITM_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SVC_ADJ_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_ADJ_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SVC_AGRDC_INV_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_AGRDC_INV_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SVC_AGRMT_DC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_AGRMT_DC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SVC_BSCUST_DC_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_BSCUST_DC_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SVC_EQP_ACC_ALLOT_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_EQP_ACC_ALLOT_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SVC_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SVC_INV_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_WHB_PEN_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_WHB_PEN_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_ALLOT_PAY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_ALLOT_PAY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_AP_REQ_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_AP_REQ_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_BAMT_CL_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_BAMT_CL_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_CARD_PAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_CARD_PAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_DRW_INV_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_DRW_INV_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_IMM_BANK_PAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_IMM_BANK_PAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_INSU_PAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_INSU_PAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_IRM_PAY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_IRM_PAY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_IRM_PAY_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_IRM_PAY_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_LMT_CHRG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_LMT_CHRG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PAY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PAY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PAY_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PAY_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PPS_CHRG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PPS_CHRG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SAV_CARD_PAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SAV_CARD_PAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SCRB_FEE_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SCRB_FEE_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SCRB_FEE_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SCRB_FEE_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SVC_PPAY_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SVC_PPAY_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_TING_CHRG_PLAN_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_TING_CHRG_PLAN_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_TING_INEE_CHRG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_TING_INEE_CHRG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BS_GUID_LINK_RACTINF_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BS_GUID_LINK_RACTINF_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BS_GUID_OBJ_SVC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BS_GUID_OBJ_SVC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BS_GUID_SVC_SND_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BS_GUID_SVC_SND_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_TERM_SETTL_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_TERM_SETTL_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PPS_DATA_CHRG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PPS_DATA_CHRG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PPS_DATA_CHRG_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PPS_DATA_CHRG_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PMBR_RGPAY_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PMBR_RGPAY_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_ROMING_DAY_TC_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_ROMING_DAY_TC_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_RNG_PRC_COND_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_RNG_PRC_COND_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_RNG_PRCPLN_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_RNG_PRCPLN_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_BIL_OUT_SETTL_RT_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_BIL_OUT_SETTL_RT_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_PHSAFPLUS_INSU_STL_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_PHSAFPLUS_INSU_STL_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SUSTL_ORBK_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SUSTL_ORBK_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SUBS_RGPAY_OP_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SUBS_RGPAY_OP_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SUPAY_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SUPAY_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SUPAY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SUPAY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SUSVC_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SUSVC_INV_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPAY_SUSTL_WAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPAY_SUSTL_WAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_SPAY_PLAN_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZINV_SPAY_PLAN_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_BIL_01_END_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "c_D_BD_ZINV_SVC_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZINV_WIRE_EXPT_PEN_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZINV_WIRE_OTM_FEE_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZINV_WIRE_SVC_DC_OBJ_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZINV_WIRE_SVC_INV_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZPAY_CARD_PAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZPAY_PAY_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BILL_ISUE_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BILL_ITM_LST_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BILL_ITM_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_DCPLN_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_DC_PLAN_REL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_INV_CL_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_INV_ITM_LST_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_INV_ITM_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_IRM_REV_ITM_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_IRM_SVC_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_NATE_CP_REV_ITM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_NBILL_OBJ_REQ_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_NP_AF_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_OK_CMP_PAY_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_OPER_CTRL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_OP_ALT_RVITM_INV_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_PRCPLN_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_PRCPLN_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_REV_ITM_LST_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_REV_ITM_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SVC_ADJ_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SVC_AGRDC_INV_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SVC_AGRMT_DC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SVC_BSCUST_DC_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SVC_EQP_ACC_ALLOT_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SVC_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_WHB_PEN_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_ALLOT_PAY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_AP_REQ_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_BAMT_CL_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_CARD_PAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_DRW_INV_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_IMM_BANK_PAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_INSU_PAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_IRM_PAY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_IRM_PAY_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_LMT_CHRG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PAY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PAY_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PPS_CHRG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SAV_CARD_PAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SCRB_FEE_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SCRB_FEE_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SVC_PPAY_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_TING_CHRG_PLAN_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_TING_INEE_CHRG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BS_GUID_LINK_RACTINF_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BS_GUID_OBJ_SVC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BS_GUID_SVC_SND_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_TERM_SETTL_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PPS_DATA_CHRG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PPS_DATA_CHRG_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PMBR_RGPAY_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_ROMING_DAY_TC_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_RNG_PRC_COND_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_RNG_PRCPLN_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_BIL_OUT_SETTL_RT_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_PHSAFPLUS_INSU_STL_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SUSTL_ORBK_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SUBS_RGPAY_OP_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SUPAY_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SUPAY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SUSVC_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPAY_SUSTL_WAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZINV_SPAY_PLAN_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "name": "ETL_CHECK_SWING_RAW_CHK",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/check/ETL_CHECK_SWING_RAW_CHK.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_CHECK_CL/0230"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_01-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_01",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_02-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_02",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_03-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_03",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_04-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_04",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_05-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_05",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_06-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_06",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_07-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_07",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "MMKT_CDC_F_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "MMKT_CDC_F_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_08-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ETL_CHECK_SWING_RAW_CNT_08",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CHK",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_01-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_02-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_03-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_04-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_05-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_06-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_07-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "MMKT_CDC_F_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ETL_CHECK_SWING_RAW_CNT_08-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

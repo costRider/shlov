@@ -1,0 +1,53 @@
+{
+  "name": "UH_ZORD_CO_CUST_M2",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/cdc_bin/controlm/ogg_init.sh %%PARM1 %%PARM2 %%PARM3 %%PARM4",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_OGG_PREPROC_M2_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZORD_CO_CUST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_CO_CUST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_CO_CUST_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ZORD_CO_CUST_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_CO_CUST_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZORD_CO_CUST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ZORD_CO_CUST_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

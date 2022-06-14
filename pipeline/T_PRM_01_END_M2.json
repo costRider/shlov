@@ -1,0 +1,1549 @@
+{
+  "name": "T_PRM_01_END_M2",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "c_D_BD_ZPRM_ORG_REF_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_ORG_REF_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_BD_ZPRM_WPTN_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_WPTN_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_AGN_CHNL_CL_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_AGN_CHNL_CL_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_AGN_CS_OP_QTY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_AGN_CS_OP_QTY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_AGN_MSTL_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_AGN_MSTL_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_AGN_MTH_ADJ_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_AGN_MTH_ADJ_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_ASGN_CMRNG_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_ASGN_CMRNG_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_ASGN_CMRNG_SSUM_DSRCT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_ASGN_CMRNG_SSUM_DSRCT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_BONDPAY_EXTRT_OBJ_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_BONDPAY_EXTRT_OBJ_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_BR_FIN_TRNSF_BF_OP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_BR_FIN_TRNSF_BF_OP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_BR_PR_MNY_PAY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_BR_PR_MNY_PAY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CIN_CO_JOINING_BR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CIN_CO_JOINING_BR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CMPT_CO_DSNET_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CMPT_CO_DSNET_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CMPT_CO_DSNET_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CMPT_CO_DSNET_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CMPT_CO_DSNET_RSLT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CMPT_CO_DSNET_RSLT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CMPT_DSNET_RLEST_GDS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CMPT_DSNET_RLEST_GDS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CNTR_JURIS_AREA_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CNTR_JURIS_AREA_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CS_AUTH_EVAL_MGMT_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CS_AUTH_EVAL_MGMT_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CS_EVAL_CMMS_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CS_EVAL_CMMS_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_DAY_COST_CLS_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_DAY_COST_CLS_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_DAY_COST_PROC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_DAY_COST_PROC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_FIN_TRNSF_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_FIN_TRNSF_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_JOIN_CO_SETTL_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_JOIN_CO_SETTL_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MBR_BILL_ISUE_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_MBR_BILL_ISUE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MBR_CARD_LMT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_MBR_CARD_LMT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MKTG_JOIN_PTN_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_MKTG_JOIN_PTN_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MTH_PR_MNY_GRP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_MTH_PR_MNY_GRP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MTH_PR_MNY_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_MTH_PR_MNY_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_OLD_EQP_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_OLD_EQP_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_BPLCY_ITM_VAL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_BPLCY_ITM_VAL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_BPLCY_UNIT_PRC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_BPLCY_UNIT_PRC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_EST_BAS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_EST_BAS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_EST_ETC_OBJ_SVC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_EST_ETC_OBJ_SVC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_OBJ_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_OBJ_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_PLCYP_AUTH_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_PLCYP_AUTH_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_PLCYP_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_PLCYP_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_PLCY_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_PLCY_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_PLCY_SALE_APRV_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_PLCY_SALE_APRV_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_POLICY_B2B_BIZR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_POLICY_B2B_BIZR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_BRNCH_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_BRNCH_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_CHRGR_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_CHRGR_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_ORG_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_ORG_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_ORG_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_ORG_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_ORG_RLEST_GDS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_ORG_RLEST_GDS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_USER_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_USER_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RGN_CMRNG_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RGN_CMRNG_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RGN_CMRNG_LDONG_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RGN_CMRNG_LDONG_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RGN_CMRNG_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RGN_CMRNG_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RL_EST_GDS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RL_EST_GDS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RL_EST_GDS_PROS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RL_EST_GDS_PROS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RL_MGR_REPVE_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RL_MGR_REPVE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_RPAY_OBJ_POLICY_LST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_RPAY_OBJ_POLICY_LST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SALE_BR_GR_MTH_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SALE_BR_GR_MTH_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SALE_BR_REPVE_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SALE_BR_REPVE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SETTL_OPER_OBJ_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SETTL_OPER_OBJ_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SETTL_PAY_ITM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SETTL_PAY_ITM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SHOP_EVAL_BAS_DATA_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SHOP_EVAL_BAS_DATA_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_STL_COST_ANAL_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_STL_COST_ANAL_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_STRTGY_CMRNG_BAS_DSRCT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_STRTGY_CMRNG_BAS_DSRCT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_STRTGY_CMRNG_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_STRTGY_CMRNG_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SVC_CLUBT_SETTL_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SVC_CLUBT_SETTL_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SVC_DCOST_PLCY_PAY_STC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SVC_DCOST_PLCY_PAY_STC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SVC_EQP_PROD_PAY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SVC_EQP_PROD_PAY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_TAX_BILL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_TAX_BILL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_T_BAS_AGRMT_ASTM_OBJ_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_T_BAS_AGRMT_ASTM_OBJ_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_BP_AGN_CHRGR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_BP_AGN_CHRGR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_CNTRCT_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_CNTRCT_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_CORP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_CORP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_CORP_SALE_EQP_STC_STRD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_CORP_SALE_EQP_STC_STRD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_EQP_POLICY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_EQP_POLICY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_LEAD_OPP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_LEAD_OPP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_SALE_CHRGR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_SALE_CHRGR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_SALE_POLICY_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_SALE_POLICY_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSFA_SALE_PROD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSFA_SALE_PROD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZSPM_BEFR_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZSPM_BEFR_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SVC_MGT_PAY_DTL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SVC_MGT_PAY_DTL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_SVC_CNVT_CMMS_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_SVC_CNVT_CMMS_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_JOIN_MKTG_PROD_CD_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_JOIN_MKTG_PROD_CD_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_JOIN_CO_SEG_DAY_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_JOIN_CO_SEG_DAY_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_JOIN_CO_DAY_SETTL_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_JOIN_CO_DAY_SETTL_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_EVAL_OBJ_CUST_SUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_EVAL_OBJ_CUST_SUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CS_QSTN_RSLT_FILE_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CS_QSTN_RSLT_FILE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_CNVT_OBJ_EQP_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_CNVT_OBJ_EQP_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PR_MNY_POLICY_NUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PR_MNY_POLICY_NUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MGMT_CMMS_AGN_MTH_STC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_MGMT_CMMS_AGN_MTH_STC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_AGN_CHNL_REL_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_AGN_CHNL_REL_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_PTN_USER_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_PTN_USER_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_WRWL_PR_MNY_EST_BAS_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_WRWL_PR_MNY_EST_BAS_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_EQP_CHG_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZPRM_EQP_CHG_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_PRM_01_END_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "c_D_BD_ZPRM_ORG_REF_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_BD_ZPRM_WPTN_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_AGN_CHNL_CL_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_AGN_CS_OP_QTY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_AGN_MSTL_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_AGN_MTH_ADJ_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_ASGN_CMRNG_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_ASGN_CMRNG_SSUM_DSRCT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_BONDPAY_EXTRT_OBJ_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_BR_FIN_TRNSF_BF_OP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_BR_PR_MNY_PAY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CIN_CO_JOINING_BR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CMPT_CO_DSNET_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CMPT_CO_DSNET_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CMPT_CO_DSNET_RSLT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CMPT_DSNET_RLEST_GDS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CNTR_JURIS_AREA_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CS_AUTH_EVAL_MGMT_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CS_EVAL_CMMS_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_DAY_COST_CLS_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_DAY_COST_PROC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_FIN_TRNSF_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_JOIN_CO_SETTL_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_MBR_BILL_ISUE_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_MBR_CARD_LMT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_MKTG_JOIN_PTN_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_MTH_PR_MNY_GRP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_MTH_PR_MNY_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_OLD_EQP_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_BPLCY_ITM_VAL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_BPLCY_UNIT_PRC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_EST_BAS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_EST_ETC_OBJ_SVC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_OBJ_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_PLCYP_AUTH_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_PLCYP_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_PLCY_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_PLCY_SALE_APRV_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_POLICY_B2B_BIZR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_BRNCH_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_CHRGR_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_ORG_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_ORG_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_ORG_RLEST_GDS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_USER_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RGN_CMRNG_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RGN_CMRNG_LDONG_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RGN_CMRNG_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RL_EST_GDS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RL_EST_GDS_PROS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RL_MGR_REPVE_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_RPAY_OBJ_POLICY_LST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SALE_BR_GR_MTH_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SALE_BR_REPVE_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SETTL_OPER_OBJ_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SETTL_PAY_ITM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SHOP_EVAL_BAS_DATA_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_STL_COST_ANAL_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_STRTGY_CMRNG_BAS_DSRCT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_STRTGY_CMRNG_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SVC_CLUBT_SETTL_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SVC_DCOST_PLCY_PAY_STC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SVC_EQP_PROD_PAY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_TAX_BILL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_T_BAS_AGRMT_ASTM_OBJ_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_BP_AGN_CHRGR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_CNTRCT_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_CORP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_CORP_SALE_EQP_STC_STRD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_EQP_POLICY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_LEAD_OPP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_SALE_CHRGR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_SALE_POLICY_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSFA_SALE_PROD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZSPM_BEFR_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SVC_MGT_PAY_DTL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_SVC_CNVT_CMMS_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_JOIN_MKTG_PROD_CD_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_JOIN_CO_SEG_DAY_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_JOIN_CO_DAY_SETTL_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_EVAL_OBJ_CUST_SUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CS_QSTN_RSLT_FILE_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_CNVT_OBJ_EQP_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PR_MNY_POLICY_NUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_MGMT_CMMS_AGN_MTH_STC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_AGN_CHNL_REL_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_PTN_USER_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_WRWL_PR_MNY_EST_BAS_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZPRM_EQP_CHG_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

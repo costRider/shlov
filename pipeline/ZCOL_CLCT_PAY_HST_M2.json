@@ -1,0 +1,36 @@
+{
+  "name": "ZCOL_CLCT_PAY_HST_M2",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/cdc_bin/controlm/ogg_init.sh %%PARM1 %%PARM2 %%PARM3 %%PARM4",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_SWING_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZCOL_CLCT_PAY_HST_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZCOL_CLCT_PAY_HST_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZCOL_CLCT_PAY_HST_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZCOL_CLCT_PAY_HST_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "CDC_FTP_SEND",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/CDC_FTP_SEND_CL/0200"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "CDC_FILE_CHECK_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "CDC_FILE_CHECK_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "CDC_FTP_SEND",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "CDC_FILE_CHECK_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

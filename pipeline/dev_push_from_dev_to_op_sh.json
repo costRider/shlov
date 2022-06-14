@@ -1,0 +1,36 @@
+{
+  "name": "dev_push_from_dev_to_op_sh",
+  "properties": {
+    "description": "/data/WIND_DW/dev/dev_push_from_dev_to_op.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/MANUAL_JOB_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "MANUAL_TABLE_JOB-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "MANUAL_TABLE_JOB",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "dev_push_from_dev_to_op_sh",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "MANUAL_TABLE_JOB-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

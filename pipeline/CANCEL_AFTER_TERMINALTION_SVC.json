@@ -1,0 +1,70 @@
+{
+  "name": "CANCEL_AFTER_TERMINALTION_SVC",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/ogg/cancel_after_termination_svc.hql %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_KEY_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "c_D_TD_ZORD_SVC_REL_HST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZORD_SVC_REL_HST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZORD_SVC_REL_GRP_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZORD_SVC_REL_GRP_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZORD_SVC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_TD_ZORD_SVC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "CANCEL_AFTER_TERMINALTION_SVC",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "c_D_TD_ZORD_SVC_REL_HST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZORD_SVC_REL_GRP_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "c_D_TD_ZORD_SVC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

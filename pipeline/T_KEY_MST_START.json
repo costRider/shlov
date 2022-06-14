@@ -1,0 +1,36 @@
+{
+  "name": "T_KEY_MST_START",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL/2310"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "CDC_FILE_CHECK_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "CDC_FILE_CHECK_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_KEY_MST_START",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "CDC_FILE_CHECK_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

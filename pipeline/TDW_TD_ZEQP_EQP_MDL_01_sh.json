@@ -1,0 +1,36 @@
+{
+  "name": "TDW_TD_ZEQP_EQP_MDL_01_sh",
+  "properties": {
+    "description": "/DBMSVC/SDD/TDW/COM/CopyFromVertica_TDW.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING_SDD/DATALAKE_DW_PROCESSING_SDD_CL/DW_COPY_TO_CDMP_SDD_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "TD_ZEQP_EQP_MDL_to_vlake-OUT_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TD_ZEQP_EQP_MDL_to_vlake",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZEQP_EQP_MDL_01_sh",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "TD_ZEQP_EQP_MDL_to_vlake-OUT_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

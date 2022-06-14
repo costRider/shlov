@@ -1,0 +1,36 @@
+{
+  "name": "TD_ZPRM_DAY_COST_PROC_to_vlake",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/SDD/controlm/copy_to_vlake.sh %%PARM1 %%PARM2",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING_SDD/DATALAKE_DW_PROCESSING_SDD_CL/DW_COPY_TO_CDMP_SDD_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_cus_dw_ok_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "T_cus_dw_ok_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TD_ZPRM_DAY_COST_PROC_to_vlake",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_cus_dw_ok_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

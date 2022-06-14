@@ -1,0 +1,36 @@
+{
+  "name": "skb_svc_mst_backup_hql",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/check/skb_svc_mst_backup.hql %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_SKB_MST_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "skb_svc_mst_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "skb_svc_mst_hql",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "skb_svc_mst_backup_hql",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "skb_svc_mst_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "ETL_CHECK_SWING_RAW_CNT_04",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/check/ETL_CHECK_SWING_RAW_CNT_04.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_CHECK_CL/0230"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_DW_END_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "T_DW_END_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "SWING_TABLE_END_M2-OUT-DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "SWING_TABLE_END_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_CHECK_SWING_RAW_CNT_04",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_DW_END_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "SWING_TABLE_END_M2-OUT-DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

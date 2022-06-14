@@ -1,0 +1,36 @@
+{
+  "name": "c_M_ZRBP_RBP_ACCUM_USE_sh",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/SRC/MON/c_M_ZRBP_RBP_ACCUM_USE.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_MONTHLY_PROCESSING/DATALAKE_DW_PROCESSING_CL/MONTHLY_JOB_09_CL/0130"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "MONTHLY_JOB_CHECK_09-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "MONTHLY_JOB_CHECK_09",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_M_ZRBP_RBP_ACCUM_USE_sh",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "MONTHLY_JOB_CHECK_09-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

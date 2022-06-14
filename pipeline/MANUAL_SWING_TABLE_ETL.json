@@ -1,0 +1,18 @@
+{
+  "name": "MANUAL_SWING_TABLE_ETL",
+  "properties": {
+    "description": "/data/WIND_DW/dev/dev_load_swing_table.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/MANUAL_JOB_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "MANUAL_SWING_TABLE_ETL",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": []
+      }
+    ]
+  }
+}

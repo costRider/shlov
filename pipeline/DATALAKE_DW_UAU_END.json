@@ -1,0 +1,1855 @@
+{
+  "name": "DATALAKE_DW_UAU_END",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_CNTRCT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CNTRCT_BLUE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_CNTRCT_SVC_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_BD_ZORD_CNTRCT_SVC_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_CONT_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CONT_HST_BLUE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_NSVC_CHG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_NSVC_CHG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_BLUE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_SVC_SET_ADDR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_SET_ADDR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_WIRE_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_WIRE_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZORD_WIRE_SVC_CHG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_WIRE_SVC_CHG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZOSS_MSC_FCLT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZOSS_MSC_FCLT",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZOSS_SCRBR_MSVCORG_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZOSS_SCRBR_MSVCORG",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_BD_ZPAY_CARD_PAY_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_BD_ZPAY_CARD_PAY",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_KEY_MST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_KEY_MST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_WORD_SVC_CHG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_WORD_SVC_CHG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_WORD_SVC_CHG_HST_ALL_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_WORD_SVC_CHG_HST_ALL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_WSVC_SVC_CHG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_WSVC_SVC_CHG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZCOL_COL_CS_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZCOL_COL_CS_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZCOL_SPCL_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZCOL_SPCL_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINB_UNLAW_SPAM_CNSL_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINB_UNLAW_SPAM_CNSL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_BILL_ISUE_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_BILL_ISUE_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_BILL_TC_QTY_MRK_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_BILL_TC_QTY_MRK",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_NBILL_OBJ_REQ_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_NBILL_OBJ_REQ_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_SVC_ADJ_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_SVC_ADJ_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_SVC_AGRMT_DC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_SVC_AGRMT_DC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_SVC_INV_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_SVC_INV_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZINV_WHB_PEN_DTL_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZINV_WHB_PEN_DTL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZMBR_MBR_CARD_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZMBR_MBR_CARD",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZMBR_MBR_CARD_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZMBR_MBR_CARD_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZMBR_MBR_CUST_EXHST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZMBR_MBR_CUST_EXHST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZMBR_MBR_VIP_CNT_PT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZMBR_MBR_VIP_CNT_PT",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_ACNT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_ACNT",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_ACNT_ADD_ITM_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_ACNT_ADD_ITM",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_ACNT_CHG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_ACNT_CHG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_AGRMT_DC_FEE_PLAN_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_AGRMT_DC_FEE_PLAN",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_ALLOT_OBJ_EQP_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_ALLOT_OBJ_EQP",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_AREA_DC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_AREA_DC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_ASGN_NUM_DC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_ASGN_NUM_DC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CMP_CELL_CHG_CNT_PT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CMP_CELL_CHG_CNT_PT",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CNTRCT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CNTRCT",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CNTRCT_SVC_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CNTRCT_SVC_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CONT_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CONT_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CO_CUST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CO_CUST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CUST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CUST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CUST_ADDR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CUST_ADDR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CUST_ANNV_LST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CUST_ANNV_LST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CUST_CNTC_PLC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CUST_CNTC_PLC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CUST_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CUST_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_CUST_SVC_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_CUST_SVC_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_EMAIL_INV_CHG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_EMAIL_INV_CHG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_GIFT_PAY_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_GIFT_PAY",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_ICALL_BILL_MEMB_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_ICALL_BILL_MEMB",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_INFO_OFR_OP_AGREE_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_INFO_OFR_OP_AGREE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_LAMT_USE_SVC_TC_DTL_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_LAMT_USE_SVC_TC_DTL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_LMT_PROD_GR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_LMT_PROD_GR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_MBLZ_GRP_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_MBLZ_GRP",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_MBLZ_MEMB_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_MBLZ_MEMB",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_NATEDRIVE_CUST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_NATEDRIVE_CUST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_NATEDRIVE_SVC_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_NATEDRIVE_SVC_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_NLINE_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_NLINE_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_NSVC_PROD_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_NSVC_PROD",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_NUM_CHG_GUID_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_NUM_CHG_GUID_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_POS_OP_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_POS_OP_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SAFETY_SVC_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SAFETY_SVC_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SOL_PROD_MEMB_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SOL_PROD_MEMB",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SPCL_CUST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SPCL_CUST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_ACNT_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_ACNT_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_CNTC_PLC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_CNTC_PLC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_DC_PLAN_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_DC_PLAN",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_EQP_ACC_ALLOT_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_EQP_ACC_ALLOT",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_EQP_ASTAMT_BR_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_EQP_ASTAMT_BR_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_EQP_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_EQP_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_GR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_GR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_GRT_INSU_ORGL_BOOK_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_GRT_INSU_ORGL_BOOK",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_ILUSE_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_ILUSE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_PROD_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_PROD",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_PROD_GRP_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_PROD_GRP",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_PROD_GRP_MEMB_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_PROD_GRP_MEMB",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_REL_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_REL_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_ST_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_ST_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_SVC_SUSP_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_SVC_SUSP_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_TEST_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_TEST_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_UA_ACNT_INFO_SCUR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_UA_ACNT_INFO_SCUR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_UA_CUST_INFO_SCUR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_UA_CUST_INFO_SCUR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_UA_SVC_INFO_SCUR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_UA_SVC_INFO_SCUR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_WLESS_SVC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_WLESS_SVC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_WLF_DC_CUST_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_WLF_DC_CUST_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZORD_WSVC_PROD_GRP_MEMB_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZORD_WSVC_PROD_GRP_MEMB",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZOUT_GIFT_PAY_REQ_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZOUT_GIFT_PAY_REQ",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZOUT_GIFT_RDLV_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZOUT_GIFT_RDLV",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_AP_REQ_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_AP_REQ_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_BANK_DRW_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_BANK_DRW_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_CARD_DRW_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_CARD_DRW_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_CARD_PAY_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_CARD_PAY",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_IMM_BANK_PAY_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_IMM_BANK_PAY",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_PAY_DTL_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_PAY_DTL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_PAY_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_PAY_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_PPS_CHRG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_PPS_CHRG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_ROMING_PAY_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_ROMING_PAY",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_SCRB_FEE_DTL_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_SCRB_FEE_DTL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_SCRB_FEE_SPC_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_SCRB_FEE_SPC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_SVC_PPAY_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_SVC_PPAY_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_TING_CHRG_PLAN_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_TING_CHRG_PLAN",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZPAY_TING_INEE_CHRG_HST_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZPAY_TING_INEE_CHRG_HST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZRBP_PT_BILL_ISUE_DISP_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZRBP_PT_BILL_ISUE_DISP",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZRBP_RBP_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZRBP_RBP",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZRBP_RBP_ACCUM_USE_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZRBP_RBP_ACCUM_USE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZRBP_RBP_FREE_SVC_REQ_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZRBP_RBP_FREE_SVC_REQ",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_TD_ZSPM_BEFR_END_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UAU_TD_ZSPM_BEFR",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DATALAKE_DW_UAU_END",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_CNTRCT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_CNTRCT_SVC_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_CONT_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_NSVC_CHG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_SVC_SET_ADDR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_WIRE_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZORD_WIRE_SVC_CHG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZOSS_MSC_FCLT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZOSS_SCRBR_MSVCORG_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_BD_ZPAY_CARD_PAY_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_KEY_MST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_WORD_SVC_CHG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_WORD_SVC_CHG_HST_ALL_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_WSVC_SVC_CHG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZCOL_COL_CS_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZCOL_SPCL_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINB_UNLAW_SPAM_CNSL_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_BILL_ISUE_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_BILL_TC_QTY_MRK_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_NBILL_OBJ_REQ_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_SVC_ADJ_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_SVC_AGRMT_DC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_SVC_INV_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZINV_WHB_PEN_DTL_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZMBR_MBR_CARD_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZMBR_MBR_CARD_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZMBR_MBR_CUST_EXHST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZMBR_MBR_VIP_CNT_PT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_ACNT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_ACNT_ADD_ITM_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_ACNT_CHG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_AGRMT_DC_FEE_PLAN_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_ALLOT_OBJ_EQP_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_AREA_DC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_ASGN_NUM_DC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CMP_CELL_CHG_CNT_PT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CNTRCT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CNTRCT_SVC_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CONT_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CO_CUST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CUST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CUST_ADDR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CUST_ANNV_LST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CUST_CNTC_PLC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CUST_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_CUST_SVC_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_EMAIL_INV_CHG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_GIFT_PAY_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_ICALL_BILL_MEMB_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_INFO_OFR_OP_AGREE_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_LAMT_USE_SVC_TC_DTL_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_LMT_PROD_GR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_MBLZ_GRP_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_MBLZ_MEMB_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_NATEDRIVE_CUST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_NATEDRIVE_SVC_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_NLINE_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_NSVC_PROD_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_NUM_CHG_GUID_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_POS_OP_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SAFETY_SVC_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SOL_PROD_MEMB_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SPCL_CUST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_ACNT_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_CNTC_PLC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_DC_PLAN_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_EQP_ACC_ALLOT_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_EQP_ASTAMT_BR_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_EQP_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_GR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_GRT_INSU_ORGL_BOOK_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_ILUSE_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_PROD_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_PROD_GRP_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_PROD_GRP_MEMB_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_REL_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_ST_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_SVC_SUSP_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_TEST_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_UA_ACNT_INFO_SCUR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_UA_CUST_INFO_SCUR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_UA_SVC_INFO_SCUR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_WLESS_SVC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_WLF_DC_CUST_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZORD_WSVC_PROD_GRP_MEMB_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZOUT_GIFT_PAY_REQ_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZOUT_GIFT_RDLV_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_AP_REQ_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_BANK_DRW_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_CARD_DRW_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_CARD_PAY_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_IMM_BANK_PAY_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_PAY_DTL_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_PAY_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_PPS_CHRG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_ROMING_PAY_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_SCRB_FEE_DTL_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_SCRB_FEE_SPC_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_SVC_PPAY_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_TING_CHRG_PLAN_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZPAY_TING_INEE_CHRG_HST_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZRBP_PT_BILL_ISUE_DISP_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZRBP_RBP_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZRBP_RBP_ACCUM_USE_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZRBP_RBP_FREE_SVC_REQ_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "DATALAKE_DW_UAU_TD_ZSPM_BEFR_END_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

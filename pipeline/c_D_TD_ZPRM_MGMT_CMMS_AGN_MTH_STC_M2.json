@@ -1,0 +1,53 @@
+{
+  "name": "c_D_TD_ZPRM_MGMT_CMMS_AGN_MTH_STC_M2",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_MAIN_CL/0020"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZPRM_MGMT_CMMS_AGN_MTH_STC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZPRM_MGMT_CMMS_AGN_MTH_STC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "SKB_MST_END-OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "SKB_MST_END",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZPRM_MGMT_CMMS_AGN_MTH_STC_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZPRM_MGMT_CMMS_AGN_MTH_STC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "SKB_MST_END-OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

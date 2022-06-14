@@ -1,0 +1,36 @@
+{
+  "name": "MONTHLY_JOB_CHECK_02",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_MONTHLY_PROCESSING/DATALAKE_DW_PROCESSING_CL/MONTHLY_JOB_02_CL/0130"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_UAU_01_END_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "T_UAU_01_END_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "MONTHLY_JOB_CHECK_02",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_UAU_01_END_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

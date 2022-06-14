@@ -1,0 +1,36 @@
+{
+  "name": "ZNGM_USER_FTP_SEND",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/cdc_file/cdc_ftp_send.sh %%PARM1 %%PARM2",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/CDC_FTP_SEND_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZNGM_DTL_AUTH_GRP_LST_FTP_SEND-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZNGM_DTL_AUTH_GRP_LST_FTP_SEND",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZNGM_USER_FTP_SEND",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZNGM_DTL_AUTH_GRP_LST_FTP_SEND-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,27 +1,155 @@
 {
-	"name": "c_D_KEY_MST_BEF_M2",
-	"properties": {
-		"description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
-		"activities": [
-			{
-				"name": "c_D_KEY_MST_BEF_M2",
-				"type": "SetVatiable",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": []
-			}
-		],
-		"folder": {
-			"name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_KEY_CL"
-		},
-		"annotations": [],
-		"lastPublishTime": "2022-06-14T14:43:38Z"
-	},
-	"type": "Microsoft.Synapse/workspaces/pipelines"
+  "name": "c_D_KEY_MST_BEF_M2",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_KEY_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "UH_CUST_NUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_CUST_NUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ACNT_NUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ACNT_NUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_SVC_MGMT_NUM_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_SVC_MGMT_NUM_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_CO_CUST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ZORD_CO_CUST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_WIRE_SVC_RCV_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ZORD_WIRE_SVC_RCV_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_NLINE_SVC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ZORD_NLINE_SVC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_NLINE_SVC_RCV_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ZORD_NLINE_SVC_RCV_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UH_ZORD_ACNT_RCV_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "UH_ZORD_ACNT_RCV_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_KEY_MST_BEF_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "UH_CUST_NUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ACNT_NUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_SVC_MGMT_NUM_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ZORD_CO_CUST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ZORD_WIRE_SVC_RCV_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ZORD_NLINE_SVC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ZORD_NLINE_SVC_RCV_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "UH_ZORD_ACNT_RCV_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

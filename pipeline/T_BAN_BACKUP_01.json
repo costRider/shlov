@@ -1,0 +1,36 @@
+{
+  "name": "T_BAN_BACKUP_01",
+  "properties": {
+    "description": "/LAKE/DWBAKSH/BAN_BACKUP/banbak_main_temp1.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_BACKUP_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_DW_BACKUP_START_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "T_DW_BACKUP_START",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_BAN_BACKUP_01",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_DW_BACKUP_START_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

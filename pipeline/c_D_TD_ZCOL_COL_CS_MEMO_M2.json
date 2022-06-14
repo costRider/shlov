@@ -1,27 +1,36 @@
 {
-	"name": "c_D_TD_ZCOL_COL_CS_MEMO_M2",
-	"properties": {
-		"description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
-		"activities": [
-			{
-				"name": "c_D_TD_ZCOL_COL_CS_MEMO_M2",
-				"type": "SetVatiable",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": []
-			}
-		],
-		"folder": {
-			"name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_SWING_CL"
-		},
-		"annotations": [],
-		"lastPublishTime": "2022-06-14T14:58:41Z"
-	},
-	"type": "Microsoft.Synapse/workspaces/pipelines"
+  "name": "c_D_TD_ZCOL_COL_CS_MEMO_M2",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_PROCESSING_SWING_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZCOL_COL_CS_MEMO_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZCOL_COL_CS_MEMO_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZCOL_COL_CS_MEMO_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZCOL_COL_CS_MEMO_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

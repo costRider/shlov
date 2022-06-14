@@ -1,0 +1,36 @@
+{
+  "name": "ZPAY_SUSTL_ORBK_M1",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/cdc_bin/controlm/ogg_init.sh %%PARM1 %%PARM2 %%PARM3 %%PARM4",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_OGG_PREPROC_M1_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_BIL_01_START_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "T_BIL_01_START_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZPAY_SUSTL_ORBK_M1",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_BIL_01_START_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

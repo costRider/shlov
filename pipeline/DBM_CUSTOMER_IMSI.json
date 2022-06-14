@@ -1,0 +1,36 @@
+{
+  "name": "DBM_CUSTOMER_IMSI",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/dbm/dbm_customer_imsi.hql %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DBM_CUSTOMER_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "c_D_DBM_CUSTOMER_MST-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "DBM_CUSTOMER_MST",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "DBM_CUSTOMER_IMSI",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "c_D_DBM_CUSTOMER_MST-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "tcam_dup_phb_obj_if",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/ogg/tcam_dup_phb_obj_if.hql %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/TOS_IF_CL/0230"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "tcam_dup_phb_obj_if",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": []
+      }
+    ]
+  }
+}

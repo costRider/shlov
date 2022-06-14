@@ -1,0 +1,18 @@
+{
+  "name": "COPY_TO_CDMP_END",
+  "properties": {
+    "description": "default",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "COPY_TO_CDMP_END",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": []
+      }
+    ]
+  }
+}

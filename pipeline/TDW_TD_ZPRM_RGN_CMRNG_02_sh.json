@@ -1,0 +1,36 @@
+{
+  "name": "TDW_TD_ZPRM_RGN_CMRNG_02_sh",
+  "properties": {
+    "description": "/DBMSVC/SDD/TDW/COM/Mart_To_TDW.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING_SDD/DATALAKE_DW_PROCESSING_SDD_CL/DW_COPY_TO_CDMP_SDD_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "TDW_TD_ZPRM_RGN_CMRNG_01_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_RGN_CMRNG_01_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_RGN_CMRNG_02_sh",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "TDW_TD_ZPRM_RGN_CMRNG_01_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "c_M_TD_ZPRM_SVC_MGT_DTL",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_file_proc.sh %%PARM1 %%PARM2",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_MONTHLY_PROCESSING/DATALAKE_DW_PROCESSING_CL/MONTHLY_JOB_17_CL/0130"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "c_M_ZPRM_SVC_MGT_DTL-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_M_ZPRM_SVC_MGT_DTL_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_M_TD_ZPRM_SVC_MGT_DTL",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "c_M_ZPRM_SVC_MGT_DTL-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

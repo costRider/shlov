@@ -1,0 +1,36 @@
+{
+  "name": "ETL_KEY_MST_CHECK_hql",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/check/ETL_KEY_MST_CHECK.hql %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_CHECK_CL/0230"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "KEY_MST_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c_D_KEY_MST_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ETL_KEY_MST_CHECK_hql",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "KEY_MST_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

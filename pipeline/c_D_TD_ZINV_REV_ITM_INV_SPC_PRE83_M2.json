@@ -1,0 +1,36 @@
+{
+  "name": "c_D_TD_ZINV_REV_ITM_INV_SPC_PRE83_M2",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_TD_ZINV_REV_ITM_INV_PRE_CL/0015"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ST_ZINV_REV_ITM_INV_SPC_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ST_ZINV_REV_ITM_INV_SPC_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "c_D_TD_ZINV_REV_ITM_INV_SPC_PRE83_M2",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ST_ZINV_REV_ITM_INV_SPC_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

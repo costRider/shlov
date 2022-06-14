@@ -1,0 +1,325 @@
+{
+  "name": "MV_REFRESH_DATALAKE_DW_PROCESSING_SDD_TDW_DAILY",
+  "properties": {
+    "description": "/DBMSVC/SDD/MV/mv_refresh.sh %%PARM1 %%PARM2",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING_SDD/DATALAKE_DW_PROCESSING_SDD_CL/DW_COPY_TO_CDMP_SDD_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "TDW_MMKT_CDC_F_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_MMKT_CDC_F_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZCAM_CMPGN_BRIEF_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZCAM_CMPGN_BRIEF_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZEQP_EQP_CL_SYS_CD_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZEQP_EQP_CL_SYS_CD_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZEQP_EQP_MDL_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZEQP_EQP_MDL_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZNGM_COMM_CD_DTL_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZNGM_COMM_CD_DTL_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZNGM_ORG_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZNGM_ORG_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZNGM_USER_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZNGM_USER_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZORD_CO_CUST_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZORD_CO_CUST_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZORD_CUST_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZORD_CUST_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZORD_M2M_BA_STRD_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZORD_M2M_BA_STRD_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZORD_NP_CO_DTL_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZORD_NP_CO_DTL_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRD_PROD_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRD_PROD_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_AGN_CHNL_CL_STRD_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_AGN_CHNL_CL_STRD_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_DAY_COST_PROC_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_DAY_COST_PROC_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_PTN_ORG_DTL_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_PTN_ORG_DTL_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_PTN_ORG_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_PTN_ORG_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_RGN_CMRNG_LDONG_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_RGN_CMRNG_LDONG_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "TDW_TD_ZPRM_RGN_CMRNG_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "TDW_TD_ZPRM_RGN_CMRNG_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "MV_REFRESH_DATALAKE_DW_PROCESSING_SDD_TDW_DAILY",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "TDW_MMKT_CDC_F_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZCAM_CMPGN_BRIEF_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZEQP_EQP_CL_SYS_CD_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZEQP_EQP_MDL_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZNGM_COMM_CD_DTL_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZNGM_ORG_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZNGM_USER_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZORD_CO_CUST_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZORD_CUST_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZORD_M2M_BA_STRD_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZORD_NP_CO_DTL_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRD_PROD_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRM_AGN_CHNL_CL_STRD_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRM_DAY_COST_PROC_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRM_PTN_ORG_DTL_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRM_PTN_ORG_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRM_RGN_CMRNG_LDONG_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "TDW_TD_ZPRM_RGN_CMRNG_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

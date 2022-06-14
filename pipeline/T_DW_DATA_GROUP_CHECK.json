@@ -1,0 +1,36 @@
+{
+  "name": "T_DW_DATA_GROUP_CHECK",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/dw_groupy_by_check.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_POST_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_DW_POST_WORK-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "DW_POST_PROC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_DW_DATA_GROUP_CHECK",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_DW_POST_WORK-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

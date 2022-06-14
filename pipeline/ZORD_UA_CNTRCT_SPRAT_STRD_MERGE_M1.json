@@ -1,0 +1,104 @@
+{
+  "name": "ZORD_UA_CNTRCT_SPRAT_STRD_MERGE_M1",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_ua_merge.sh %%PARM1 %%PARM2 %%PARM3 %%PARM4",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_OGG_PREPROC_M1_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZORD_UA_CNTRCT_SPRAT_STRD_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_UA_CNTRCT_SPRAT_STRD_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZORD_UA_CNTRCT_SPRAT_STRD_1_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_UA_CNTRCT_SPRAT_STRD_1_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZORD_UA_CNTRCT_SPRAT_STRD_2_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_UA_CNTRCT_SPRAT_STRD_2_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZORD_UA_CNTRCT_SPRAT_STRD_3_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_UA_CNTRCT_SPRAT_STRD_3_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZORD_UA_CNTRCT_SPRAT_STRD_4_M1-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZORD_UA_CNTRCT_SPRAT_STRD_4_M1",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZORD_UA_CNTRCT_SPRAT_STRD_MERGE_M1",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZORD_UA_CNTRCT_SPRAT_STRD_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ZORD_UA_CNTRCT_SPRAT_STRD_1_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ZORD_UA_CNTRCT_SPRAT_STRD_2_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ZORD_UA_CNTRCT_SPRAT_STRD_3_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "ZORD_UA_CNTRCT_SPRAT_STRD_4_M1-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

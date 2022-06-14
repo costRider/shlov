@@ -1,0 +1,36 @@
+{
+  "name": "CDC_FILE_BACKUP",
+  "properties": {
+    "description": "/DBMSVC/TDW/bin/controlm/cdc_file/cdc_file_backup.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_POST_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "CDC_FILE_DELETE-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "CDC_FILE_DELETE",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "CDC_FILE_BACKUP",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "CDC_FILE_DELETE-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "T_DW_BACKUP_START",
+  "properties": {
+    "description": "/LAKE/DWBAKSH/before_cleansing.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_BACKUP_CL/1700"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "DATALAKE_DW_START_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "DATALAKE_DW_START",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_DW_BACKUP_START",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "DATALAKE_DW_START_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

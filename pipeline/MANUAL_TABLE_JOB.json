@@ -1,0 +1,36 @@
+{
+  "name": "MANUAL_TABLE_JOB",
+  "properties": {
+    "description": "/data/WIND_DW/dev/dev_ogg_proc.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/MANUAL_JOB_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "MANUAL_TABLE_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "MANUAL_TABLE_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "MANUAL_TABLE_JOB",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "MANUAL_TABLE_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

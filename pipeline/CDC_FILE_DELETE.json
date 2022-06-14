@@ -1,0 +1,36 @@
+{
+  "name": "CDC_FILE_DELETE",
+  "properties": {
+    "description": "/DBMSVC/TDW/bin/controlm/cdc_file/cdc_file_delete.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_POST_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_DW_POST_WORK-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "DW_POST_PROC",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "CDC_FILE_DELETE",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_DW_POST_WORK-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

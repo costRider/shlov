@@ -1,0 +1,70 @@
+{
+  "name": "MV_REFRESH_DATALAKE_DW_PROCESSING_SDD_BDW_DAILY",
+  "properties": {
+    "description": "/DBMSVC/SDD/MV/mv_refresh.sh %%PARM1 %%PARM2",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING_SDD/DATALAKE_DW_PROCESSING_SDD_CL/DW_COPY_TO_CDMP_SDD_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "BDW_BD_ZNGM_LDONG_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "BDW_BD_ZNGM_LDONG_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "BDW_BD_ZNGM_ADDR_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "BDW_BD_ZNGM_ADDR_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "BDW_BD_ZOSS_BLD_02_sh-out_DL_SDD_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "BDW_BD_ZOSS_BLD_02_sh",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "MV_REFRESH_DATALAKE_DW_PROCESSING_SDD_BDW_DAILY",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "BDW_BD_ZNGM_LDONG_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "BDW_BD_ZNGM_ADDR_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "BDW_BD_ZOSS_BLD_02_sh-out_DL_SDD_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

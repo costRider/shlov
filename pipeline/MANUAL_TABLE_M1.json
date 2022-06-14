@@ -1,0 +1,36 @@
+{
+  "name": "MANUAL_TABLE_M1",
+  "properties": {
+    "description": "/data/WIND_DW/dev/dev_ogg_init.sh %%PARM1 %%PARM2 %%PARM3 %%PARM4",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/MANUAL_JOB_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "MANUAL_SWING_TABLE_ETL-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "MANUAL_SWING_TABLE_ETL",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "MANUAL_TABLE_M1",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "MANUAL_SWING_TABLE_ETL-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "UAU_TD_ZORD_ACNT_CHG_HST",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/controlm_uau_proc.sh %%PARM1 %%PARM2 %%PARM3",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_UAU_PROC_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "DATALAKE_DW_UAU_START_OUT_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "DATALAKE_DW_UAU_START",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "UAU_TD_ZORD_ACNT_CHG_HST",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "DATALAKE_DW_UAU_START_OUT_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

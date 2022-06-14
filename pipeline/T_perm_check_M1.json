@@ -1,0 +1,36 @@
+{
+  "name": "T_perm_check_M1",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/cdc_file/perm_check_m1.sh %%PARM1",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_ALL_PROC_CL/2310"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "DATALAKE_DW_UAU_END_OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "DATALAKE_DW_UAU_END",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "T_perm_check_M1",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "DATALAKE_DW_UAU_END_OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

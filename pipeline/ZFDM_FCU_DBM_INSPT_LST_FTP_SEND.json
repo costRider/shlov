@@ -1,0 +1,36 @@
+{
+  "name": "ZFDM_FCU_DBM_INSPT_LST_FTP_SEND",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/bin/controlm/cdc_file/cdc_ftp_send.sh %%PARM1 %%PARM2",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/CDC_FTP_SEND_CL"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "ZFDM_FCU_DISTB_RSLT_FTP_SEND-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ZFDM_FCU_DISTB_RSLT_FTP_SEND",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZFDM_FCU_DBM_INSPT_LST_FTP_SEND",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "ZFDM_FCU_DISTB_RSLT_FTP_SEND-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

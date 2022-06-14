@@ -1,0 +1,36 @@
+{
+  "name": "ZOSS_BLD_TABLE_COL_LEN_CHECK",
+  "properties": {
+    "description": "/DBMSVC/EMR/TDW/hql/check/TABLE_COL_LEN_CHECK.sh %%PARM1 %%PARM2 %%PARM3 %%PARM4",
+    "folder": {
+      "name": "CLOUD_LAKE_DATALAKE_DW_PROCESSING/DATALAKE_DW_PROCESSING_CL/DW_CHECK_CL/0230"
+    },
+    "annotations": [],
+    "activities": [
+      {
+        "name": "T_DW_END_M2-OUT_DL_CL",
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "T_DW_END_M2",
+            "type": "PipelineReference"
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "ZOSS_BLD_TABLE_COL_LEN_CHECK",
+        "type": "SetVatiable",
+        "typeProperties": {},
+        "dependsOn": [
+          {
+            "activity": "T_DW_END_M2-OUT_DL_CL",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
